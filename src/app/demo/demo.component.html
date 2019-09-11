@@ -1,23 +1,36 @@
 <mat-toolbar color="primary">
   <span>My Application</span>
 </mat-toolbar>
-
 <div class="layout">
   <mat-card>
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Title">
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="URL">
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Comment"></textarea>
-      </mat-form-field>
-
-    </form>
+    <mat-card-header>
+      <mat-card-title class="title">
+        <span>Add</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form class="example-form">
+        <!-- <mat-form-field class="example-full-width">
+          <input matInput placeholder="Description" autocomplete="off">
+        </mat-form-field> -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="URL" autocomplete="off">
+        </mat-form-field>
+        <div class="example-full-width">
+          <mat-slide-toggle checked>Using title as description</mat-slide-toggle>
+        </div>
+        <!-- <mat-list>
+          <mat-list-item> Pepper </mat-list-item>
+          <mat-list-item> Salt </mat-list-item>
+          <mat-list-item> Paprika </mat-list-item>
+        </mat-list> -->
+        <!-- <mat-form-field class="example-full-width">
+          <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
+        </mat-form-field> -->
+      </form>
+    </mat-card-content>
+    <mat-divider></mat-divider>
     <mat-card-actions>
       <button mat-button color="primary">Submit</button>
       <button mat-button>Cancel</button>

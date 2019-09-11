@@ -13,6 +13,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list'
 
 @NgModule({
   declarations: [
@@ -30,7 +36,14 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatDividerModule,
+    MatListModule,
+
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
