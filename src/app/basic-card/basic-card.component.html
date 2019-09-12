@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title class="header">
+      <span>{{title}}</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    Here is content!
+    {{hello}}
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions class="action-group">
+    <button mat-button color="primary" (click)="onConfirm()">{{confirmText}}</button>
+    <button mat-button (click)="onCancel()">{{cancelText}}</button>
+  </mat-card-actions>
+</mat-card>
