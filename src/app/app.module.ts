@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,13 +20,19 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { BasicCardComponent } from './basic-card/basic-card.component'
+import { BasicCardComponent } from './basic-card/basic-card.component';
+import { ItemCardComponent } from './item-card/item-card.component';
+import { RouteAComponent } from './route-a/route-a.component';
+import { RouteBComponent } from './route-b/route-b.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    BasicCardComponent
+    BasicCardComponent,
+    ItemCardComponent,
+    RouteAComponent,
+    RouteBComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,12 @@ import { BasicCardComponent } from './basic-card/basic-card.component'
     MatDividerModule,
     MatListModule,
 
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    RouterModule.forRoot([
+      { path: 'a', component: RouteAComponent },
+      { path: 'b', component: RouteBComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

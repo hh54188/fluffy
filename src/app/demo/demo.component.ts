@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../models/Item'
 
 @Component({
   selector: 'app-demo',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.less']
 })
 export class DemoComponent implements OnInit {
+
+  item: Item = {
+    title: 'haha',
+    url: 'http://example.com'
+  }
 
   constructor() { }
 

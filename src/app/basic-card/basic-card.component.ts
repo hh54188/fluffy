@@ -7,19 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BasicCardComponent implements OnInit {
 
-  @Input() hello: string;
-
-  title: string = "Title";
-
-  confirmText: string = "Submit";
-
-  cancelText: string = "Cancel";
-
-  onConfirm(): void {
-  }
-
-  onCancel(): void {
-  }
+  @Input() title: string = "Title";
 
   constructor() { }
 

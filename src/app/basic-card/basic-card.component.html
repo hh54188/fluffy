@@ -6,12 +6,16 @@
   </mat-card-header>
   <mat-divider></mat-divider>
   <mat-card-content>
-    Here is content!
-    {{hello}}
+    <mat-form-field>
+      <input matInput placeholder="URL" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="URL" autocomplete="off">
+    </mat-form-field>
   </mat-card-content>
   <mat-divider></mat-divider>
   <mat-card-actions class="action-group">
-    <button mat-button color="primary" (click)="onConfirm()">{{confirmText}}</button>
-    <button mat-button (click)="onCancel()">{{cancelText}}</button>
+    <button mat-button color="primary" (click)="onConfirm()">Submit</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
   </mat-card-actions>
 </mat-card>
