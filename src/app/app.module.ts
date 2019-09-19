@@ -23,7 +23,8 @@ import { MatListModule } from '@angular/material/list';
 import { BasicCardComponent } from './basic-card/basic-card.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { RouteAComponent } from './route-a/route-a.component';
-import { RouteBComponent } from './route-b/route-b.component'
+import { RouteBComponent } from './route-b/route-b.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RouteBComponent } from './route-b/route-b.component'
     BasicCardComponent,
     ItemCardComponent,
     RouteAComponent,
-    RouteBComponent
+    RouteBComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
