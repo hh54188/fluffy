@@ -16,9 +16,41 @@
 .side {
   height: 100%;
   overflow: auto;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.26);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+  }
 }
 
 .content {
+  box-sizing: border-box;
   height: 100%;
   overflow: auto;
+  padding: 20px;
+
+  .item {
+    font-size: 13px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.26);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+  }
 }

@@ -1,11 +1,18 @@
 <div class="container" fxLayout="column" fxFlexFill>
-  <div class="nav">nav</div>
+  <div class="nav">
+    <mat-toolbar color="primary" class="nav">
+    </mat-toolbar>
+  </div>
   <div class="wrapper" fxLayout="row">
     <div class="side" fxFlex="300px">
-      <div style="background-color: yellow;height: 2000px;">Side</div>
+      <div style="height: 2000px;">
+        side
+      </div>
     </div>
     <div class="content" fxFlex="grow">
-      <div style="background-color: red;height: 1000px;">Content</div>
+      <div style="height: 1000px;">
+        <app-folder-detail></app-folder-detail>
+      </div>
     </div>
   </div>
 </div>

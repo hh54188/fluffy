@@ -24,7 +24,13 @@ import { BasicCardComponent } from './basic-card/basic-card.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { RouteAComponent } from './route-a/route-a.component';
 import { RouteBComponent } from './route-b/route-b.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatRippleModule } from '@angular/material/core';
+
 import { ContainerComponent } from './container/container.component';
+import { FolderDetailComponent } from './folder-detail/folder-detail.component';
+import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
+import { FolderItemComponent } from './folder-item/folder-item.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,10 @@ import { ContainerComponent } from './container/container.component';
     ItemCardComponent,
     RouteAComponent,
     RouteBComponent,
-    ContainerComponent
+    ContainerComponent,
+    FolderDetailComponent,
+    BookmarkItemComponent,
+    FolderItemComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +62,8 @@ import { ContainerComponent } from './container/container.component';
     MatSlideToggleModule,
     MatDividerModule,
     MatListModule,
+    MatTreeModule,
+    MatRippleModule,
 
     FlexLayoutModule,
 
