@@ -1,4 +1,4 @@
-<div class="container" fxLayout="column" fxFlexFill>
+<div class="container" fxLayout="column" fxFlexFill (contextmenu)="onContextMenu($event)">
   <div class="nav">
     <mat-toolbar color="primary" class="nav">
     </mat-toolbar>
@@ -10,8 +10,8 @@
       </div>
     </div>
     <div class="content" fxFlex="grow">
-      <!-- <app-folder-detail></app-folder-detail> -->
-      <app-folder-column-view></app-folder-column-view>
+      <app-folder-detail></app-folder-detail>
+      <!-- <app-folder-column-view></app-folder-column-view> -->
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material';
+
 import { Position } from '../models/position'
 
 @Component({
@@ -10,8 +12,21 @@ export class BookmarkItemContextMenuComponent implements OnInit {
 
   constructor() { }
 
-  @Input() position: Position
+  @ViewChild(MatMenuTrigger, { static: false })
+  contextMenu: MatMenuTrigger;
 
+  contextMenuPosition = {
+    x: '',
+    y: '',
+  }
+
+  public openContextMenu(position: Position): void {
+    this.contextMenuPosition = {
+      x: `${position.x}px`,
+      y: `${position.y}px`,
+    };
+    this.contextMenu.openMenu();
+  }
   ngOnInit() {
   }
 

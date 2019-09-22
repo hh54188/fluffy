@@ -9,6 +9,10 @@ export class ContainerComponent implements OnInit {
 
   constructor() { }
 
+  onContextMenu(event) {
+    console.log(event);
+  }
+
   ngOnInit() {
   }
 
