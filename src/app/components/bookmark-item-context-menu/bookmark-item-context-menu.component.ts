@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material';
 
-import { Position } from '../models/position'
+import { Position } from '../../models/position'
 
 @Component({
   selector: 'app-bookmark-item-context-menu',
@@ -27,6 +27,12 @@ export class BookmarkItemContextMenuComponent implements OnInit {
     };
     this.contextMenu.openMenu();
   }
+
+  public closeContextMenu(): void {
+    this.contextMenu.closeMenu();
+  }
+
+
   ngOnInit() {
   }
 

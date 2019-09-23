@@ -1,11 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DemoComponent } from './demo/demo.component';
+
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -20,19 +17,22 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { BasicCardComponent } from './basic-card/basic-card.component';
-import { ItemCardComponent } from './item-card/item-card.component';
-import { RouteAComponent } from './route-a/route-a.component';
-import { RouteBComponent } from './route-b/route-b.component';
+import { BasicCardComponent } from './components/basic-card/basic-card.component';
+import { ItemCardComponent } from './components/item-card/item-card.component';
+import { RouteAComponent } from './components/route-a/route-a.component';
+import { RouteBComponent } from './components/route-b/route-b.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatRippleModule } from '@angular/material/core';
 
-import { ContainerComponent } from './container/container.component';
-import { FolderDetailComponent } from './folder-detail/folder-detail.component';
-import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
-import { FolderItemComponent } from './folder-item/folder-item.component';
-import { BookmarkItemContextMenuComponent } from './bookmark-item-context-menu/bookmark-item-context-menu.component';
-import { FolderColumnViewComponent } from './folder-column-view/folder-column-view.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { DemoComponent } from './components/demo/demo.component';
+import { ContainerComponent } from './components/container/container.component';
+import { FolderDetailComponent } from './components/folder-detail/folder-detail.component';
+import { BookmarkItemComponent } from './components/bookmark-item/bookmark-item.component';
+import { FolderItemComponent } from './components/folder-item/folder-item.component';
+import { BookmarkItemContextMenuComponent } from './components/bookmark-item-context-menu/bookmark-item-context-menu.component';
+import { FolderColumnViewComponent } from './components/folder-column-view/folder-column-view.component';
 
 @NgModule({
   declarations: [

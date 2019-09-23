@@ -1,5 +1,7 @@
-<div class="container" fxLayout="column" fxFlexFill (contextmenu)="onContextMenu($event)">
-  <div class="nav">
+<div class="container" fxLayout="column" fxFlexFill (contextmenu)="onContextMenu($event)"
+  (mousedown)="onMouseDown($event)">
+  <app-bookmark-item-context-menu></app-bookmark-item-context-menu>
+  <div class=" nav">
     <mat-toolbar color="primary" class="nav">
     </mat-toolbar>
   </div>
