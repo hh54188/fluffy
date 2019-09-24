@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, HostListener } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material';
 
 import { Position } from '../../models/position'
@@ -18,6 +18,33 @@ export class BookmarkItemContextMenuComponent implements OnInit {
   contextMenuPosition = {
     x: '',
     y: '',
+  }
+
+  @HostListener('document:mousedown', ['$event'])
+  documentMouseDownHandler(event) {
+    const eventInContextMenu = this.checkMouseDownIsInContexMenu(event);
+    if (eventInContextMenu) {
+      console.log('DO NOT CLOSE')
+    } else {
+      this.contextMenu.closeMenu();
+      console.log('DO CLOSE')
+    }
+    console.log('Document Mouse Down');
+  }
+
+  private checkMouseDownIsInContexMenu(event: MouseEvent): Boolean {
+    const targetClass = 'bookmark-item-context-menu';
+    let tempTarget = event.target;
+    let result = false;
+
+    while ((tempTarget && tempTarget.tagName.toLowerCase() !== 'body') && !result) {
+      if (tempTarget && tempTarget.classList.contains(targetClass)) {
+        result = true;
+        break;
+      }
+      tempTarget = tempTarget.parentElement;
+    }
+    return result;
   }
 
   public openContextMenu(position: Position): void {

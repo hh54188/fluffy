@@ -27,13 +27,13 @@ export class ContainerComponent implements OnInit {
   @ViewChild(BookmarkItemContextMenuComponent, { static: false })
   contextMenu: BookmarkItemContextMenuComponent
 
-  @HostListener('document:contextmenu', ['$event'])
-  onBodyContextMenu(event: MouseEvent) {
-    console.log("event--------->", event);
-    event.preventDefault();
-    this.contextMenuService.closeContextMenu();
-    console.log("Document Context Menu Event")
-  }
+  // @HostListener('document:contextmenu', ['$event'])
+  // onBodyContextMenu(event: MouseEvent) {
+  //   console.log("event--------->", event);
+  //   event.preventDefault();
+  //   this.contextMenuService.closeContextMenu();
+  //   console.log("Document Context Menu Event")
+  // }
 
   onContextMenu(event: MouseEvent) {
     // this.contextMenu.openContextMenu();
