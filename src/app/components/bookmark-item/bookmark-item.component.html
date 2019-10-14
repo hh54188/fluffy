@@ -1,6 +1,6 @@
-<mat-list-item matRipple (contextmenu)="onContextMenu($event)" class="bookmark-item">
+<mat-list-item matRipple (contextmenu)="onContextMenu($event)" class="bookmark-item" appContextMenu
+  [contextMenuType]="'Item1'">
   <span class="title">Pepper</span>
-  <app-bookmark-item-context-menu></app-bookmark-item-context-menu>
 </mat-list-item>
 <mat-divider>
 </mat-divider>

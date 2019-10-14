@@ -34,7 +34,7 @@ export class BookmarkItemContextMenuComponent implements OnInit {
 
   private checkMouseDownIsInContexMenu(event: MouseEvent): Boolean {
     const targetClass = 'bookmark-item-context-menu';
-    let tempTarget = event.target;
+    let tempTarget = event.target as HTMLElement;
     let result = false;
 
     while ((tempTarget && tempTarget.tagName.toLowerCase() !== 'body') && !result) {

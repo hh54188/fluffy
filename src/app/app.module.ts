@@ -33,6 +33,7 @@ import { BookmarkItemComponent } from './components/bookmark-item/bookmark-item.
 import { FolderItemComponent } from './components/folder-item/folder-item.component';
 import { BookmarkItemContextMenuComponent } from './components/bookmark-item-context-menu/bookmark-item-context-menu.component';
 import { FolderColumnViewComponent } from './components/folder-column-view/folder-column-view.component';
+import { ContextMenuDirective } from './directives/context-menu.directive';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { FolderColumnViewComponent } from './components/folder-column-view/folde
     BookmarkItemComponent,
     FolderItemComponent,
     BookmarkItemContextMenuComponent,
-    FolderColumnViewComponent
+    FolderColumnViewComponent,
+    ContextMenuDirective
   ],
   imports: [
     BrowserModule,
