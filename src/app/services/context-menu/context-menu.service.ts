@@ -12,23 +12,17 @@ export class ContextMenuService {
 
   constructor() { }
 
-  private contextMenuStateSubject: Subject<ContextMenuState> = new Subject();
+  private contextMenuStateSubject: Subject<ContextMenuState> = new Subject<ContextMenuState>();
 
   getContextMenuState(): Subject<ContextMenuState> {
     return this.contextMenuStateSubject;
   }
 
   openContextMenu(contextMenuType: ContextMenuTypes, position: Position): void {
-    this.contextMenuStateSubject.next({
-      show: true,
-      type: contextMenuType,
-      position,
-    });
-    console.log('open context menu')
+    this.contextMenuStateSubject.next(new ContextMenuState(true, contextMenuType, position));
   }
 
   closeContextMenu(): void {
     this.contextMenuStateSubject.next(new ContextMenuState);
-    console.log('close context menu')
   }
 }

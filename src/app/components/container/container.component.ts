@@ -10,21 +10,15 @@ import { ContextMenuState } from '../../models/context-menu-state';
   styleUrls: ['./container.component.less']
 })
 export class ContainerComponent implements OnInit {
-
   constructor(private contextMenuService: ContextMenuService) {
-    console.log(this.contextMenuService.getContextMenuState());
-    // WILL NOT WORK:
-    // const itemContextMenuEvent$ = this.contextMenuService.getContextMenuState().filter(e => e.type === ContextMenuTypes.Item);
-    // const folderContextMenuEvent$ = this.contextMenuService.getContextMenuState().filter(e => e.type === ContextMenuTypes.Folder);
-
-    // this.contextMenuService.getContextMenuState().subscribe(contextMenuState => {
-    //   this.contextMenuState = contextMenuState
-    //   if (contextMenuState.show) {
-    //     this.contextMenu.openContextMenu(contextMenuState.position);
-    //   } else {
-    //     this.contextMenu.closeContextMenu();
-    //   }
-    // });
+    this.contextMenuService.getContextMenuState().subscribe(contextMenuState => {
+      // this.contextMenuState = contextMenuState
+      // if (contextMenuState.show) {
+      //   this.contextMenu.openContextMenu(contextMenuState.position);
+      // } else {
+      //   this.contextMenu.closeContextMenu();
+      // }
+    });
   }
 
   private contextMenuState: ContextMenuState;

@@ -20,7 +20,7 @@ export class BookmarkItemContextMenuComponent implements OnInit {
     y: '',
   }
 
-  @HostListener('document:mousedown', ['$event'])
+  // @HostListener('document:mousedown', ['$event'])
   documentMouseDownHandler(event) {
     const eventInContextMenu = this.checkMouseDownIsInContexMenu(event);
     if (eventInContextMenu) {
