@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { BookmarkItemContextMenuComponent } from '../bookmark-item-context-menu/bookmark-item-context-menu.component';
 import { ContextMenuService } from '../../services/context-menu/context-menu.service'
-
+import { ContextMenuTypes } from '../../enums/context-menu-types';
 import { ContextMenuState } from '../../models/context-menu-state';
 
 @Component({
@@ -12,14 +12,19 @@ import { ContextMenuState } from '../../models/context-menu-state';
 export class ContainerComponent implements OnInit {
 
   constructor(private contextMenuService: ContextMenuService) {
-    this.contextMenuService.getContextMenuState().subscribe(contextMenuState => {
-      this.contextMenuState = contextMenuState
-      if (contextMenuState.show) {
-        this.contextMenu.openContextMenu(contextMenuState.position);
-      } else {
-        this.contextMenu.closeContextMenu();
-      }
-    });
+    console.log(this.contextMenuService.getContextMenuState());
+    // WILL NOT WORK:
+    // const itemContextMenuEvent$ = this.contextMenuService.getContextMenuState().filter(e => e.type === ContextMenuTypes.Item);
+    // const folderContextMenuEvent$ = this.contextMenuService.getContextMenuState().filter(e => e.type === ContextMenuTypes.Folder);
+
+    // this.contextMenuService.getContextMenuState().subscribe(contextMenuState => {
+    //   this.contextMenuState = contextMenuState
+    //   if (contextMenuState.show) {
+    //     this.contextMenu.openContextMenu(contextMenuState.position);
+    //   } else {
+    //     this.contextMenu.closeContextMenu();
+    //   }
+    // });
   }
 
   private contextMenuState: ContextMenuState;
@@ -38,12 +43,12 @@ export class ContainerComponent implements OnInit {
   onContextMenu(event: MouseEvent) {
     // this.contextMenu.openContextMenu();
     event.preventDefault();
-    console.log("Container Context Menu Event")
+    // console.log("Container Context Menu Event")
   }
 
   onMouseDown(event: MouseEvent) {
-    this.contextMenuService.closeContextMenu();
-    console.log("Container Mouse Down Event")
+    // this.contextMenuService.closeContextMenu();
+    // console.log("Container Mouse Down Event")
   }
 
   ngOnInit() {
