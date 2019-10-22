@@ -14,8 +14,7 @@ export class ContextMenuDirective {
   }
 
   @HostListener('contextmenu', ['$event'])
-  onContextMenu(event: MouseEvent) {
-    console.log("-----------------", this.contextMenuType)
+  onContextMenu(event: MouseEvent): void {
     this.contextMenuService.openContextMenu(
       (this.contextMenuType || ContextMenuTypes.Null),
       new Position(event.clientX, event.clientY)

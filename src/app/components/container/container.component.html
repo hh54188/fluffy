@@ -1,5 +1,5 @@
-<div class="container" fxLayout="column" fxFlexFill (contextmenu)="onContextMenu($event)"
-  (mousedown)="onMouseDown($event)" appContextMenu [contextMenuType]="'Container'">
+<div class="container" fxLayout="column" fxFlexFill (contextmenu)="onContextMenu($event)" appContextMenu
+  [contextMenuType]="'Container'">
   <app-bookmark-item-context-menu></app-bookmark-item-context-menu>
   <div class=" nav">
     <mat-toolbar color="primary" class="nav">
@@ -13,7 +13,6 @@
     </div>
     <div class="content" fxFlex="grow">
       <app-folder-detail></app-folder-detail>
-      <!-- <app-folder-column-view></app-folder-column-view> -->
     </div>
   </div>
 </div>
