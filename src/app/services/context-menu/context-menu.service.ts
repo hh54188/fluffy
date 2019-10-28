@@ -21,8 +21,4 @@ export class ContextMenuService {
   openContextMenu(contextMenuType: ContextMenuTypes, position: Position): void {
     this.contextMenuStateSubject.next(new ContextMenuState(true, contextMenuType, position));
   }
-
-  closeContextMenu(): void {
-    this.contextMenuStateSubject.next(new ContextMenuState);
-  }
 }
